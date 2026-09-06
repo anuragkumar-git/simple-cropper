@@ -542,22 +542,31 @@ export default function Cropper({
     applyFitMode(fitMode);
   }, [imageSrc, boxDimensions.w, boxDimensions.h, fitMode]);
 
-  // UI Scaling
+  // UI Scaling (Constrains to both available width and max screen height)
   useEffect(() => {
     const updateScale = () => {
       if (wrapperRef.current) {
         const availableWidth = wrapperRef.current.clientWidth - 40;
-        setDisplayScale(
+        // Restrict maximum preview height to 55% of the browser window height so it never overflows vertically
+        const availableHeight = window.innerHeight * 0.55;
+
+        const scaleX =
           boxDimensions.w > availableWidth
             ? availableWidth / boxDimensions.w
-            : 1,
-        );
+            : 1;
+        const scaleY =
+          boxDimensions.h > availableHeight
+            ? availableHeight / boxDimensions.h
+            : 1;
+
+        // Use whichever scale is stricter so it fits completely on screen
+        setDisplayScale(Math.min(scaleX, scaleY, 1));
       }
     };
     updateScale();
     window.addEventListener("resize", updateScale);
     return () => window.removeEventListener("resize", updateScale);
-  }, [boxDimensions.w]);
+  }, [boxDimensions.w, boxDimensions.h]); // Added boxDimensions.h to dependencies
 
   // Estimate File Size & Generate Live Preview Thumbnail
   useEffect(() => {
