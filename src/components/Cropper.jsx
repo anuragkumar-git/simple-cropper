@@ -363,17 +363,19 @@ export default function Cropper({
           <small
             style={{ color: "#666", display: "block", marginBottom: "8px" }}
           >
-            💡 Use Mouse-Wheel or Pinch to Zoom
+            Use Mouse-Wheel or Pinch to Zoom
           </small>
+          <div className="export-info">
           <button onClick={() => applyFitMode("cover")}>Reset Center</button>
           <button onClick={onRotate}>Rotate 90°</button>
           <button onClick={onFlip}>Mirror Image</button>
+          </div>
         </div>
       )}
 
       {/* Action Panel with Real-time Preview */}
       <div className="action-panel" style={{ marginTop: "20px" }}>
-        <div className="export-info">
+        <div className="">
           <div className="live-preview-box">
             <small>Final Output Preview:</small>
             {previewUrl ? (
@@ -386,26 +388,26 @@ export default function Cropper({
               <div className="mini-preview skeleton"></div>
             )}
           </div>
-          <div className="export-stats">
-            <p>
-              <strong>Est. Size:</strong> ~{fileSizeKb} KB
-            </p>
+          <div className=" export-info">
             <input
               type="text"
               value={fileName}
               onChange={(e) => setFileName(e.target.value)}
               placeholder="Custom File Name"
               style={{
-                width: "100%",
-                padding: "6px",
-                marginBottom: "8px",
-                borderRadius: "4px",
-                border: "1px solid #ccc",
-              }}
-            />
+                  width: "100%",
+                  padding: "6px",
+                  marginBottom: "8px",
+                  borderRadius: "4px",
+                  border: "1px solid #ccc",
+                }}
+                />
             <button className="primary-btn" onClick={handleDownload}>
-              Download Image
+              Download Img
             </button>
+                <p>
+                  <strong>Est. Size:</strong> ~{fileSizeKb} KB
+                </p>
           </div>
         </div>
       </div>

@@ -327,7 +327,7 @@ textarea {
   padding: 15px;
   border-radius: 8px;
   width: 100%;
-  max-width: 450px;
+  max-width: 500px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
@@ -347,8 +347,8 @@ textarea {
 }
 
 .mini-preview {
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  /* height: 200px; */
   object-fit: contain;
   /* background: repeating-conic-gradient(#ccc 0% 25%, transparent 0% 50%); 
   background-size: 10px 10px;
