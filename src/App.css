@@ -1,0 +1,447 @@
+/* .app-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.settings-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.dimensions {
+  display: flex;
+  gap: 10px;
+}
+
+.dimensions input, .dimensions select {
+  padding: 8px;
+  font-size: 1rem;
+}
+
+.cropper-ui {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.controls {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+/* ---------------------------- */
+/* .app-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.settings-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.dimensions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.dimensions input,
+.dimensions select {
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.dpi-setting {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: #e9ecef;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.cropper-ui {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.controls button {
+  padding: 8px 12px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.action-panel {
+  background: #fff3cd;
+  padding: 15px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.primary-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.primary-btn:hover {
+  background-color: #0056b3;
+}
+
+.error-message {
+  color: #dc3545;
+  font-weight: bold;
+  background: #f8d7da;
+  padding: 10px;
+  border-radius: 4px;
+} */
+
+/* src/App.css */
+.unselectable {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+
+/* Allow text selection specifically inside inputs so users can type */
+input,
+select,
+textarea {
+  user-select: text;
+}
+
+.app-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.settings-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.dimensions,
+.export-settings {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.setting-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #e9ecef;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.dimensions input,
+.dimensions select,
+.export-settings select {
+  padding: 8px;
+  font-size: 0.95rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.cropper-ui {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.controls button {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-top: 5px;
+  background: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.ratio-badge {
+  background: #343a40;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+
+.action-panel {
+  background: #fff3cd;
+  padding: 15px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 350px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.primary-btn {
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.primary-btn:hover {
+  background-color: #0056b3;
+}
+
+.error-message {
+  color: #dc3545;
+  font-weight: bold;
+  background: #f8d7da;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.info-text {
+  font-size: 0.85rem;
+  color: #6c757d;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+}
+
+.info-toast {
+  background: #cce5ff;
+  color: #004085;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.info-badge {
+  background: #343a40;
+  color: #fff;
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+
+/* Add to existing src/App.css */
+
+.empty-state {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+}
+
+.upload-box {
+  border: 2px dashed #007bff;
+  padding: 40px;
+  border-radius: 12px;
+  background: #f8f9fa;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.upload-box h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.upload-box p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.re-upload {
+  width: 100%;
+  text-align: left;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Action Panel & Live Preview styling */
+.action-panel {
+  background: #fff3cd;
+  padding: 15px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.export-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.live-preview-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.8rem;
+  color: #555;
+}
+
+.mini-preview {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  /* background: repeating-conic-gradient(#ccc 0% 25%, transparent 0% 50%); 
+  background-size: 10px 10px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  margin-top: 5px;
+  background-color: white; */
+}
+
+.mini-preview.skeleton {
+  background: #e9ecef;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+.color-picker-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.7rem;
+  color: #666;
+}
+
+.color-picker-wrapper input {
+  cursor: pointer;
+}
+
+/* Rule of Thirds Grid */
+.grid-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.grid-line {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+}
+
+.horizontal-1 {
+  top: 33.33%;
+  left: 0;
+  right: 0;
+  height: 1px;
+}
+.horizontal-2 {
+  top: 66.66%;
+  left: 0;
+  right: 0;
+  height: 1px;
+}
+.vertical-1 {
+  left: 33.33%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+}
+.vertical-2 {
+  left: 66.66%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+}
+
+/* File Name Input */
+.filename-input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+}
+
+.export-stats {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
