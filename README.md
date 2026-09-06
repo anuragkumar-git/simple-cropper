@@ -1,16 +1,23 @@
-# React + Vite
+# Simple Cropper & Image Resizer 🖼️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A lightweight, lightning-fast, and privacy-focused Progressive Web Application (PWA) built with **React** and **Vite**. Crop, resize, compress, rotate, and convert images entirely client-side with zero server uploads.
 
-Currently, two official plugins are available:
+## ✨ Key Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* **Flexible Unit Conversions:** Resize images using **Pixels (px)**, **Centimeters (cm)**, **Inches (in)**, **Aspect Ratios**, or **Freeform Drag-to-Resize**.
+* **Physical Print Ready:** Custom **DPI (Dots Per Inch)** settings for accurate print sizing.
+* **Smart Framing & Positioning:** Switch seamlessly between **Cover**, **Contain**, and **Fill** modes. Includes smooth panning and touch pinch-to-zoom support.
+* **Image Compression:** Instantly optimize file sizes using the live quality slider with real-time visual previews and size estimation.
+* **Background & Transparency Control:** Choose between White, Black, Transparent (PNG/WebP), or Custom HEX background colors using a native color picker.
+* **Transformations:** Quick 90-degree rotations and horizontal mirroring (flipping).
+* **100% Offline-First (PWA):** Fully functional offline service workers cached via Workbox. Install it on desktop or mobile just like a native app.
+* **Zero Server Latency:** All canvas rendering and data processing happen locally in your browser for absolute privacy.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Tech Stack
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* **Framework:** React (Vite)
+* **Styling:** Vanilla CSS (Responsive for Mobile, Tablet, and Desktop)
+* **Image Processing:** HTML5 Canvas API (`HTMLCanvasElement.toBlob`)
+* **PWA & Offline Storage:** Vite PWA Plugin / Workbox
