@@ -1,141 +1,3 @@
-/* .app-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  font-family: sans-serif;
-  text-align: center;
-}
-
-.settings-panel {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-  margin-bottom: 30px;
-  padding: 20px;
-  background: #f8f9fa;
-  border-radius: 8px;
-}
-
-.dimensions {
-  display: flex;
-  gap: 10px;
-}
-
-.dimensions input, .dimensions select {
-  padding: 8px;
-  font-size: 1rem;
-}
-
-.cropper-ui {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.controls {
-  margin-top: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
-
-/* ---------------------------- */
-/* .app-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  font-family: sans-serif;
-  text-align: center;
-}
-
-.settings-panel {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-  margin-bottom: 30px;
-  padding: 20px;
-  background: #f8f9fa;
-  border-radius: 8px;
-}
-
-.dimensions {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.dimensions input,
-.dimensions select {
-  padding: 8px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.dpi-setting {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  background: #e9ecef;
-  padding: 5px 10px;
-  border-radius: 4px;
-}
-
-.cropper-ui {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.controls {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin: 10px 0;
-}
-
-.controls button {
-  padding: 8px 12px;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-.action-panel {
-  background: #fff3cd;
-  padding: 15px;
-  border-radius: 8px;
-  width: 100%;
-  max-width: 300px;
-}
-
-.primary-btn {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  font-size: 1rem;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.primary-btn:hover {
-  background-color: #0056b3;
-}
-
-.error-message {
-  color: #dc3545;
-  font-weight: bold;
-  background: #f8d7da;
-  padding: 10px;
-  border-radius: 4px;
-} */
-
 /* src/App.css */
 .unselectable {
   -webkit-user-select: none; /* Safari */
@@ -226,13 +88,21 @@ textarea {
   font-size: 0.9rem;
 }
 
+/* Action Panel & Live Preview styling */
 .action-panel {
   background: #fff3cd;
   padding: 15px;
   border-radius: 8px;
   width: 100%;
-  max-width: 350px;
+  max-width: 100%; /* Changed from 500px to 100% */
+  box-sizing: border-box; /* Added to ensure padding doesn't overflow */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+.action-panel-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .primary-btn {
@@ -314,22 +184,12 @@ textarea {
   margin-bottom: 20px;
 }
 
-.re-upload {
-  width: 100%;
-  text-align: left;
-  padding-bottom: 15px;
-  border-bottom: 1px solid #ddd;
-}
-
-/* Action Panel & Live Preview styling */
-.action-panel {
-  background: #fff3cd;
-  padding: 15px;
-  border-radius: 8px;
-  width: 100%;
-  max-width: 500px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-}
+/* .re-upload {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+} */
 
 .export-info {
   display: flex;
@@ -444,4 +304,186 @@ textarea {
   display: flex;
   flex-direction: column;
   width: 100%;
+}
+
+/* Responsive Layout Fixes */
+.width-height-inputs {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.width-height-inputs input {
+  width: 80px;
+}
+
+.re-upload {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+  gap: 10px;
+}
+
+.file-name-display {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.sm-btn {
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* Action Panel & Preview Container */
+.export-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.export-stats {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 8px;
+}
+
+/* Custom Filename Input & Extension */
+.filename-wrapper {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 2px 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.filename-wrapper input {
+  border: none;
+  flex-grow: 1;
+  padding: 8px 4px;
+  margin: 0;
+  min-width: 0;
+}
+
+.filename-wrapper input:focus {
+  outline: none;
+}
+
+.file-ext {
+  color: #666;
+  font-weight: bold;
+  font-size: 0.9rem;
+  user-select: none;
+}
+
+.est-size {
+  margin: 5px 0 0 0;
+  text-align: center;
+}
+
+/* Freeform Resize Indicator */
+.resize-indicator {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 25px;
+  height: 25px;
+  background: linear-gradient(135deg, transparent 50%, rgba(0, 0, 0, 0.4) 50%);
+  pointer-events: none; /* Passes clicks directly to native resize handle */
+  z-index: 20;
+}
+
+.btn-group {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.zoom-hint {
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* --- Mobile Responsiveness Media Queries --- */
+@media (max-width: 650px) {
+  .dimensions {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Make sure dimensions inputs don't stretch to 100% so they can sit side-by-side */
+  .dimensions input {
+    width: auto;
+    max-width: 80px;
+  }
+
+  .export-settings select,
+  .dimensions select {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .export-settings {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .setting-group {
+    justify-content: space-between;
+  }
+
+  .width-height-inputs {
+    justify-content: center;
+  }
+
+  .re-upload {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .export-container {
+    flex-direction: column;
+  }
+
+  .mini-preview {
+    width: 300px;
+  }
+
+  .export-stats {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .controls {
+    flex-wrap: wrap;
+  }
+
+  .export-info {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .primary-btn {
+    width: 100%;
+  }
+
+  .action-panel-inner {
+    flex-direction: column;
+    text-align: center;
+  }
 }
